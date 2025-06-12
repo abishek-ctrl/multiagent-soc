@@ -1,26 +1,18 @@
 from crewai import Agent
-from tools.attack_log_generator import AttackLogGeneratorTool
+from tools.cicids_loader import CICIDSLogTool
 
-# 🕵️ Reconnaissance Agent
 recon_agent = Agent(
     role="Reconnaissance Agent",
-    goal="Simulate early-stage network reconnaissance via port scans and service fingerprinting",
-    backstory=(
-        "An adversary conducting stealthy network scans to discover open ports and live hosts "
-        "using tools like Nmap or Masscan. Generates Zeek-style connection logs."
-    ),
-    tools=[AttackLogGeneratorTool(attack_type="recon")],
+    goal="Load and simulate reconnaissance activity logs from real attack datasets",
+    backstory="An adversary agent analyzing and injecting logs from real-world attacks captured in the CICIDS2017 dataset.",
+    tools=[CICIDSLogTool()],
     verbose=True
 )
 
-# 🚨 Exploit Injector Agent
-exploit_injector = Agent(
-    role="Exploit Injector",
-    goal="Emulate mid-stage attack behaviors like SSH brute-force or web exploit injection",
-    backstory=(
-        "An attacker attempting to gain unauthorized access to systems using SSH brute force "
-        "and exploiting known CVEs via HTTP requests. Generates logs with realistic attack entries."
-    ),
-    tools=[AttackLogGeneratorTool(attack_type="exploit")],
-    verbose=True
-)
+# exploit_injector = Agent(
+#     role="Exploit Injector",
+#     goal="Emulate mid-stage attacks like infiltration, DoS, brute force from real dataset logs",
+#     backstory="An adversary replaying actual attack patterns observed in network traces. Uses verified labeled data to create believable log trails.",
+#     tools=[CICIDSLogTool()],
+#     verbose=True
+# )

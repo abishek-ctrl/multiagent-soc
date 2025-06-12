@@ -6,9 +6,15 @@ import dotenv
 dotenv.load_dotenv()
 
 # llm = LLM(
-#     model="openrouter/mistralai/devstral-small:free",
-#     api_key=os.getenv("GROQ_API_KEY"),  # Use the environment variable for the API key
+#     model="ollama/phi3.5:latest",
+#     base_url="http://192.168.1.15:11434",
+#     api_key="none"
 # )
+
+llm = LLM(
+    model="groq/llama-3.1-8b-instant",
+    api_key=os.getenv("GROQ_API_KEY"),  # Use the environment variable for the API key
+)
 
 # # Access the API key from environment variables
 # openrouter_api_key = os.getenv("OPENROUTER_API_KEY")
@@ -22,11 +28,7 @@ dotenv.load_dotenv()
 #     base_url="https://openrouter.ai/api/v1",
 #     api_key=openrouter_api_key # Use the variable that holds the environment value
 # )
-llm = LLM(
-    model="ollama/phi3.5:latest",
-    base_url="http://192.168.1.15:11434",
-    api_key="none"
-)
+
 
 # from langchain.chat_models import ChatOpenAI
 # from dotenv import load_dotenv

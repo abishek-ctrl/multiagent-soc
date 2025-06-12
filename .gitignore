@@ -17,3 +17,17 @@ output/test_2025-06-11_14-16-08/run.log
 output/test_2025-06-11_14-21-55/run.log
 output/test_2025-06-11_14-26-12/run.log
 output/output.md
+data/enterprise-attack.json
+data/03-02-2018.csv
+data/friday_sample.json
+data/friday.csv
+data/syn_log_old.txt
+output/test_2025-06-12_23-13-53/run.log
+output/test_2025-06-12_23-20-11/run.log
+output/test_2025-06-12_23-22-14/run.log
+output/test_2025-06-12_23-27-07/run.log
+main.py
+output/test_2025-06-12_23-41-36/syn_log.txt
+output/test_2025-06-12_23-41-36/run.log
+output/test_2025-06-12_23-38-05/run.log
+data/friday.csv.zip
