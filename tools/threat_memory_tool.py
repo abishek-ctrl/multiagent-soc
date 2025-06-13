@@ -1,5 +1,5 @@
 from crewai.tools import BaseTool
-from langchain_community.embeddings import OllamaEmbeddings
+from langchain_ollama import OllamaEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain.schema.document import Document
 import os
@@ -30,10 +30,17 @@ class ThreatMemoryTool(BaseTool):
         try:
             store_path = "data/memory_index"
             embeddings = OllamaEmbeddings(model="all-minilm")
-            if os.path.exists(store_path):
-                vectorstore = FAISS.load_local(store_path, embeddings)
+
+            if os.path.exists(os.path.join(store_path, "index.faiss")):
+                vectorstore = FAISS.load_local(
+                    store_path,
+                    embeddings,
+                    allow_dangerous_deserialization=True  #fix
+                )
             else:
-                vectorstore = FAISS.from_documents([], embeddings)
+                dummy_doc = Document(page_content="placeholder", metadata={"note": "placeholder"})
+                vectorstore = FAISS.from_documents([dummy_doc], embeddings)
+
 
             if query_or_logs.strip().startswith("["):
                 logs = json.loads(query_or_logs)
@@ -47,6 +54,7 @@ class ThreatMemoryTool(BaseTool):
                 vectorstore.add_documents(docs)
                 vectorstore.save_local(store_path)
                 return f"Stored {len(docs)} logs in memory."
+
             else:
                 results = vectorstore.similarity_search(query_or_logs, k=5)
                 return json.dumps([
@@ -56,5 +64,6 @@ class ThreatMemoryTool(BaseTool):
                         "timestamp": r.metadata.get("timestamp")
                     } for r in results
                 ], indent=2)
+
         except Exception as e:
-            return f"Threat memory failed: {str(e)}"
+            return f"Threat memory failed: {e}"

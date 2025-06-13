@@ -8,5 +8,5 @@ tools\log_parser.py
 tools\attack_log_generator.py
 data/enterprise-attack.json
 main.py
-output/test_2025-06-13_19-21-50/syn_log.json
-output/test_2025-06-13_19-21-50/blue_output.json
+data/memory_index
+output
