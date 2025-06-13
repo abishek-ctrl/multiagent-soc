@@ -1,10 +1,11 @@
 from crewai import Agent, LLM
 # from tools.log_parser import LogParserTool
+import dotenv
 from tools.mitigation_planner import MitigationPlannerTool
 from tools.mitre_lookup_tool import MITRELookupTool
 from tools.threat_memory_tool import ThreatMemoryTool
 from tools.universal_log_parser import UniversalLogParserTool
-import dotenv
+from config import llm
 import os
 
 dotenv.load_dotenv()
@@ -15,10 +16,10 @@ dotenv.load_dotenv()
 #     api_key=os.getenv("OPENROUTER_API_KEY"),
 # )
 
-llm = LLM(
-    model="groq/llama-3.1-8b-instant",
-    api_key=os.getenv("GROQ_API_KEY"),  # Use the environment variable for the API key
-)
+# llm = LLM(
+#     model="groq/llama-3.1-8b-instant",
+#     api_key=os.getenv("GROQ_API_KEY"),  # Use the environment variable for the API key
+# )
 # llm = LLM(
 #     model="ollama/phi3.5:latest",
 #     base_url="http://192.168.1.15:11434",
@@ -41,8 +42,8 @@ llm = LLM(
 
 log_monitor = Agent(
     role="Log Monitor",
-    goal="Parse various log types into structured formats for downstream threat analysis.",
-    backstory="A versatile agent with capability to parse CICIDS datasets, Zeek, Syslog, and Apache logs into clean JSON structures.",
+    goal="Parse raw logs into structured entries suitable for analysis",
+    backstory="You are stationed in a SOC. You transform unstructured logs into JSON using parsing tools. You MUST use the Universal Log Parser.",
     tools=[UniversalLogParserTool()],
     verbose=True
 )
@@ -65,9 +66,8 @@ log_monitor = Agent(
 
 threat_classifier = Agent(
     role="Threat Classifier",
-    goal="Use MITRE ATT&CK mappings and contextual reasoning to classify cyber events.",
-    backstory="Trained on the entire MITRE corpus, this agent matches patterns to known adversarial techniques. It combines structured knowledge with live log insights.",
-    llm=llm,
+    goal="Assign MITRE classifications to each structured log entry using tools",
+    backstory="You are trained on MITRE ATT&CK. Use the MITRE Lookup Tool to map labels like 'Brute Force'. Then classify logs.",
     tools=[MITRELookupTool()],
     verbose=True
 )
@@ -96,7 +96,7 @@ response_planner = Agent(
         "Correlate current threats with historical patterns. For each detected event, "
         "propose actionable mitigations. Reference memory if similar threats were seen before."
     ),
-    backstory="A senior SOC strategist using historical attack memory to suggest evidence-based responses.",
+    backstory="You are a SOC responder. You use memory to prevent repeated threats.",
     tools=[MitigationPlannerTool(), ThreatMemoryTool()],
     verbose=True,
     llm=llm

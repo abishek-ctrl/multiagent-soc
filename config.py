@@ -7,14 +7,21 @@ dotenv.load_dotenv()
 
 # llm = LLM(
 #     model="ollama/phi3.5:latest",
-#     base_url="http://192.168.1.15:11434",
+#     base_url="http://localhost:11434",
 #     api_key="none"
 # )
 
+from crewai import LLM
+
 llm = LLM(
-    model="groq/llama-3.1-8b-instant",
-    api_key=os.getenv("GROQ_API_KEY"),  # Use the environment variable for the API key
+    model="gemini/gemini-2.0-flash-lite",
+    temperature=0.7,
 )
+
+# llm = LLM(
+#     model="groq/llama3-70b-8192",
+#     api_key=os.getenv("GROQ_API_KEY"),  # Use the environment variable for the API key
+# )
 
 # # Access the API key from environment variables
 # openrouter_api_key = os.getenv("OPENROUTER_API_KEY")

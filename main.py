@@ -4,24 +4,24 @@ import os
 import dotenv
 import time
 from datetime import datetime
-import sys
 import json
-
+import sys
+import sys
+import io
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 from crewai import Task, Crew
 from agents.blue_team import log_monitor, threat_classifier, response_planner
-from agents.red_team import recon_agent 
-#, exploit_injector
+from agents.red_team import recon_agent, exploit_injector
 
 dotenv.load_dotenv()
 start_time = time.time()
 
-# === Setup: Output directory ===
+# === Output setup ===
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 log_dir = f"output/test_{timestamp}"
 os.makedirs(log_dir, exist_ok=True)
 log_path = os.path.join(log_dir, "run.log")
 
-# === Log both to console and file ===
 class TeeLogger:
     def __init__(self, *streams):
         self.streams = streams
@@ -36,85 +36,101 @@ class TeeLogger:
 log_file = open(log_path, "w")
 sys.stdout = TeeLogger(sys.__stdout__, log_file)
 
-# === RED TEAM PHASE ===
+# === RED TEAM ===
 print("\n=== [Red Team] Generating Attack Logs ===\n")
 
-# Task to pull real attack logs
 recon_task = Task(
-    description="Load real-world network attack logs from CICIDS2017 dataset (filtered for Friday only).",
+    description=(
+        "Call your tool (CICIDS Dataset Log Tool) and return its output ONLY"
+        "You MUST call the tool and return ONLY tool_output as-is. DO NOT explain. DO NOT generate Final Answer.\n\n"
+        "**Return ONLY the JSON list of logs. No thoughts. No formatting.**"
+    ),
     agent=recon_agent,
-    expected_output="JSON array of attack logs simulating reconnaissance and infiltration patterns."
+    expected_output="JSON array of logs",
 )
 
-# exploit_task = Task(
-#     description="Load additional logs simulating mid-stage attacks such as brute force and DoS from the dataset.",
-#     agent=exploit_injector,
-#     expected_output="JSON array of logs representing SSH brute force, DoS Hulk, and other exploit patterns."
-# )
+
+exploit_task = Task(
+    description=(
+        "Call your tool (CICIDS Dataset Log Tool) and return output ONLY. "
+        "You MUST call the tool and return the tool_output as-is. DO NOT explain. DO NOT generate Final Answer.\n\n"
+        "**Return ONLY the JSON list. No thoughts. No formatting.**"
+    ),
+    agent=exploit_injector,
+    expected_output="JSON array of logs",
+)
 
 red_crew = Crew(
-    tasks=[recon_task],
+    tasks=[recon_task, exploit_task],
     verbose=True
 )
+
 red_output = red_crew.kickoff()
+red_result = str(red_output)
 
-red_log_file = os.path.join(log_dir, "syn_log.txt")
+
+# === Validate Red Output ===
+try:
+    red_logs = json.loads(red_result)
+    assert isinstance(red_logs, list)
+except Exception as e:
+    print(" Red Team output is not valid JSON list:", e)
+    print("Raw Output:\n", red_result)
+    exit(1)
+
+# Save red logs
+red_log_file = os.path.join(log_dir, "syn_log.json")
 with open(red_log_file, "w") as f:
-    f.write(str(red_output))
+    json.dump(red_logs, f, indent=2)
 
-# === Load Red Team Logs into Blue Team Pipeline ===
+# === BLUE TEAM ===
 print("\n=== [Blue Team] Starting Detection Phase ===\n")
-
-# You can replace this path with your actual dataset or leave as red team output
-with open(red_log_file, "r") as f:
-    raw_logs = f.read()
-
-# === BLUE TEAM PHASE ===
 
 log_task = Task(
     description=(
-        "Parse the following raw logs into structured JSON events:\n\n"
-        f"{raw_logs}\n\n"
-        "Expected format: JSON list of entries with keys like timestamp, source_ip, dest_ip, event_type, etc."
+        "Parse the following JSON array of raw logs into structured entries using the Universal Log Parser tool.\n"
+        "Do not explain or summarize. **Return ONLY the JSON list.**\n\n"
+        f"{json.dumps(red_logs)}"
     ),
     agent=log_monitor,
-    expected_output="Parsed and structured logs as JSON array."
+    expected_output="A list of structured JSON logs."
 )
 
 classify_task = Task(
     description=(
-        "Classify the structured logs using MITRE ATT&CK categories. "
-        "For each event, return a classification like Initial Access, Execution, Persistence, etc.\n\n"
-        "Format: <entry>{\"classification\": \"Execution\", \"confidence\": \"high\"}</entry>"
+        "Use the MITRE Lookup Tool to classify each structured log entry.\n"
+        "Map each attack label (e.g., DoS, BruteForce) to MITRE tactics.\n"
+        "**Respond ONLY with a JSON list of classification results.**"
     ),
     agent=threat_classifier,
     context=[log_task],
-    expected_output="A list of threat-tagged logs with MITRE ATT&CK classification."
+    expected_output="JSON list of classification entries per log"
 )
 
 mitigate_task = Task(
     description=(
-        "Generate actionable mitigation strategies for each classified event. "
-        "Use historical memory to correlate past threats. "
-        "Format:\n<entry>{\"mitigation\": \"action plan\", \"event_id\": int}</entry>"
+        "Generate a mitigation plan for each classified threat.\n"
+        "Use the Threat Memory Tool to detect repeated attack patterns.\n"
+        "**Respond ONLY with a JSON list of {\"event_id\": int, \"mitigation\": str}.**"
     ),
     agent=response_planner,
     context=[classify_task],
-    expected_output="A structured mitigation plan in JSON format."
+    expected_output="JSON list of mitigation plans"
 )
 
 blue_crew = Crew(
     tasks=[log_task, classify_task, mitigate_task],
     verbose=True
 )
+
 blue_output = blue_crew.kickoff()
 
-# === Output ===
-print("\n=== [FINAL REPORT] Agentic Output ===\n")
+# === Save Blue Output ===
+print("\n=== [FINAL OUTPUT] ===\n")
 print(blue_output)
 
 with open(os.path.join(log_dir, "output.md"), "w") as f:
     f.write(str(blue_output))
 
 end_time = time.time()
-print(f"\n✅ Completed in {end_time - start_time:.2f} seconds.")
+print(f"\n Execution completed in {end_time - start_time:.2f} seconds.")
