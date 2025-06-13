@@ -1,47 +1,77 @@
-# Autonomous Multi-Agent Threat Intelligence System
+# 🧠 multiagent-soc
+### Autonomous Multi-Agent Security Operations Center Simulation (Red Team vs Blue Team)
 
-This project simulates a Red Team vs. Blue Team scenario using autonomous agents to generate, classify, and mitigate cyber threats based on real-world datasets and the MITRE ATT&CK framework.
+This project simulates a simplified version of the Red Team vs. Blue Team operation using autonomous agents, powered by LLMs, to process, classify, and respond to cyber threats from real-world logs. Built using the CrewAI framework, it emulates how a Security Operations Center (SOC) could operate with agentic intelligence and threat memory.
 
-## Project Structure
+## ⚙️ Project Structure
+```
+multiagent-soc/
+├── main.py              # Entry point: launches Red & Blue team pipelines
+├── agents/              # Role definitions for autonomous red/blue team agents
+├── tools/               # Tools for parsing logs, threat memory, mitigation, etc.
+├── data/                # Contains CICIDS logs and MITRE ATT&CK JSON
+├── batch_executor.py    # Enables log batching and distributed processing
+├── output/              # Timestamped log runs
+└── README.md            # You're here
+```
 
-- `main.py` — Entry point; orchestrates the Red/Blue team workflow.
-- `agents/` — Contains agent definitions for both teams.
-- `tools/` — Custom tools for log loading, threat memory, mitigation planning, etc.
-- `data/` — Datasets (e.g., CICIDS2017, MITRE ATT&CK).
-- `scripts/` — Utility scripts for data processing.
+## 🔁 Workflow Overview
 
-## Workflow
+1. 🟥 **Red Team Phase (Simulated Attacker)**
+   - **Recon Agent:** Loads simulated PortScan logs from the CICIDS2017 dataset
+   - **Exploit Injector Agent:** Loads DDoS/BruteForce logs from the same dataset
+   - Both agents use the CICIDS Dataset Log Tool and output realistic logs in structured format.
 
-1. **Red Team Phase**
-   - *Reconnaissance Agent*: Loads and outputs reconnaissance attack logs from the dataset.
-   - *Exploit Injector Agent*: Loads and outputs exploit attack logs.
+2. 🟦 **Blue Team Phase (Autonomous Defense)**
+   - **Threat Classifier:** Analyzes logs using LLMs and classifies threat types like "Privilege Escalation", "Initial Access", etc.
+   - **Mitigation Planner:** Crafts actionable responses per threat (e.g., block IP, reset credentials), and stores/checks memory with a FAISS vector DB
+   - All logs are processed in batches of 40 for performance, reducing latency and hallucination.
 
-2. **Blue Team Phase**
-   - *Threat Classifier*: Analyzes logs and classifies threats using the MITRE ATT&CK framework.
-   - *Mitigation Planner*: Generates actionable mitigation plans for each classified threat, referencing past incidents via the Threat Memory Tool.
+## 🧪 Real-World Simulation Features
+| Component         | Description                                                      |
+|-------------------|------------------------------------------------------------------|
+| ✅ Log Batching   | Improves speed and avoids LLM overflow (40–45 logs per crew execution) |
+| ✅ FAISS Memory   | Stores past threats, enables proactive mitigation pattern search  |
+| ✅ Tool Isolation | Agents use tools directly; no hallucinated outputs from LLMs     |
+| ✅ CICIDS Dataset | Real network flows, filtered per attack type                     |
+| ✅ LLM-Driven     | All reasoning/classification uses Ollama + all-minilm embeddings |
 
-3. **Logging**
-   - All actions and results are logged to a timestamped file in the `output/` directory.
+## ⏱️ Performance Comparison (100 Samples)
+| Mode    | Duration (s) | Accuracy Notes                        |
+|---------|--------------|---------------------------------------|
+| 🧠 Normal | 167.70       | Missed ~10 logs due to token loss      |
+| ⚡ Batched| 149.55       | All logs processed with memory        |
 
-## How to Run
+Log batching provided ~11% performance gain and reduced LLM failure edge cases.
 
-1. Install dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
-2. Ensure datasets are present in the `data/` directory.
-3. Run the main workflow:
-   ```
-   python main.py
-   ```
+## 🚀 How to Run
 
-## Customization
+### 🔧 Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-- Modify agent logic in `agents/`.
-- Add or update tools in `tools/`.
-- Update datasets in `data/`.
+### 📁 Ensure:
+- CICIDS dataset is placed in `data/friday.csv`
+### ▶ Run the main entry point:
+```bash
+python main.py
+```
 
-## References
+## 🛠 Customization
+- Add more Red Team agents: Command & Control, Persistence, Exfiltration
+- Add Blue Team logic: Alert Prioritizer, Incident Reporter
+- Extend batching logic in `batch_executor.py`
+- Swap embeddings (currently using OllamaEmbeddings + FAISS)
+- Replace file-based logs with Kafka or socket streaming
 
-- [MITRE ATT&CK](https://attack.mitre.org/)
+## 📈 Roadmap
+- 🌐 Web UI for real-time monitoring of agent decisions and logs
+- 📦 Dockerized multi-agent deployment
+- 🧩 Integration with Zeek/NIDS for live packet streams
+- 📊 Automatic markdown + PDF incident reports
+
+## 📚 References
 - [CICIDS2017 Dataset](https://www.unb.ca/cic/datasets/malmem-2022.html)
+- [CrewAI Framework](https://github.com/joaomdmoura/crewAI)
+- [LangChain FAISS & Embeddings](https://python.langchain.com/docs/integrations/vectorstores/faiss)
