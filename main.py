@@ -81,40 +81,32 @@ with open(os.path.join(log_dir, "syn_log.json"), "w") as f:
 # === BLUE TEAM CREW ===
 print("\n=== [Blue Team - Classification & Mitigation] ===\n")
 
-classify_task = Task(
-    description=(
-        "Classify the logs below into MITRE ATT&CK tactics/techniques.\n"
-        "Return format:\n"
-        "[\n"
-        "  {\"src_ip\": \"...\", \"classification\": \"...\", \"technique_id\": \"...\", "
-        "\"technique\": \"...\", \"confidence\": \"high\", \"reason\": \"...\", \"timestamp\": \"...\"}\n"
-        "]\n\n"
-        "Logs:\n\n" + json.dumps(all_red_logs)
-    ),
-    agent=threat_classifier,
-    expected_output="A JSON list of classified logs."
-)
+# === BLUE TEAM ===
+from batch_executor import split_batches, run_blue_team_pipeline
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
-mitigate_task = Task(
-    description=(
-        "Generate mitigation plans for the classified logs. Include 'timestamp' in the output.\n"
-        "Output format:\n"
-        "[{\"event_id\": 1, \"classification\": \"...\", \"mitigation\": \"...\", \"timestamp\": \"...\", \"source_event\": {...}}, ...]"
-    ),
-    agent=response_planner,
-    context=[classify_task],
-    expected_output="Mitigation plan."
-)
+# === SPLIT RED LOGS INTO BATCHES ===
+batches = split_batches(all_red_logs, batch_size=40)
+final_mitigations = []
 
-blue_crew = Crew(tasks=[classify_task, mitigate_task], verbose=True)
-blue_output = blue_crew.kickoff()
+print(f"\n Launching Blue Team on {len(batches)} batches...\n")
 
-# === Final Output ===
-print("\n=== [FINAL OUTPUT] ===\n")
-print(blue_output)
+# === RUN IN PARALLEL ===
+with ThreadPoolExecutor(max_workers=3) as executor:
+    futures = {executor.submit(run_blue_team_pipeline, batch, idx): idx for idx, batch in enumerate(batches)}
+
+    for future in as_completed(futures):
+        batch_id = futures[future]
+        try:
+            output = future.result()
+            print(f"Batch {batch_id} completed")
+            final_mitigations.append(output)
+        except Exception as e:
+            print(f"Batch {batch_id} failed: {e}")
 
 with open(os.path.join(log_dir, "blue_output.json"), "w") as f:
-    f.write(str(blue_output))
+    json.dump(final_mitigations, f, indent=2)
 
+print("\n All Blue Team batches complete. Output written.")
 end_time = time.time()
 print(f"\n Execution completed in {end_time - start_time:.2f} seconds.")
