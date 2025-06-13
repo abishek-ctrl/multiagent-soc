@@ -5,6 +5,7 @@ import ipaddress
 
 class CICIDSLogTool(BaseTool):
     name: str = "CICIDS Dataset Log Tool"
+    _return_direct = True
     description: str = """
         "Loads logs from the CICIDS2017 dataset (`data/friday_sample.csv`) and filters by attack type.\n\n"
         "**attack_type** options:\n"

@@ -1,16 +1,14 @@
-# main.py
-
 import os
 import dotenv
 import time
 from datetime import datetime
 import json
 import sys
-import sys
 import io
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+
 from crewai import Task, Crew
-from agents.blue_team import log_monitor, threat_classifier, response_planner
+from agents.blue_team import threat_classifier, response_planner
 from agents.red_team import recon_agent, exploit_injector
 
 dotenv.load_dotenv()
@@ -36,14 +34,14 @@ class TeeLogger:
 log_file = open(log_path, "w")
 sys.stdout = TeeLogger(sys.__stdout__, log_file)
 
-# === RED TEAM ===
-print("\n=== [Red Team] Generating Attack Logs ===\n")
+print("\n=== [Red Team] Generating Logs ===\n")
 
 recon_task = Task(
     description=(
-        "Call your tool (CICIDS Dataset Log Tool) and return its output ONLY"
-        "You MUST call the tool and return ONLY tool_output as-is. DO NOT explain. DO NOT generate Final Answer.\n\n"
-        "**Return ONLY the JSON list of logs. No thoughts. No formatting.**"
+        "You MUST use your tool, and return ONLY the tool output."
+        "DO NOT generate any commentary."
+        "DO NOT wrap anything in Final Answer or markdown."
+        "Respond with JSON list ONLY. No other format will be accepted."
     ),
     agent=recon_agent,
     expected_output="JSON array of logs",
@@ -52,84 +50,78 @@ recon_task = Task(
 
 exploit_task = Task(
     description=(
-        "Call your tool (CICIDS Dataset Log Tool) and return output ONLY. "
-        "You MUST call the tool and return the tool_output as-is. DO NOT explain. DO NOT generate Final Answer.\n\n"
-        "**Return ONLY the JSON list. No thoughts. No formatting.**"
+        "You MUST use your tool, and return ONLY the tool output."
+        "DO NOT generate any commentary."
+        "DO NOT wrap anything in Final Answer or markdown."
+        "Respond with JSON list ONLY. No other format will be accepted."
     ),
     agent=exploit_injector,
     expected_output="JSON array of logs",
 )
 
-red_crew = Crew(
-    tasks=[recon_task, exploit_task],
-    verbose=True
-)
-
+red_crew = Crew(tasks=[recon_task, exploit_task], verbose=True)
 red_output = red_crew.kickoff()
-red_result = str(red_output)
 
+# === Combine both red agent outputs ===
+def extract_logs(output_str):
+    try:
+        return json.loads(str(output_str))
+    except:
+        return []
 
-# === Validate Red Output ===
-try:
-    red_logs = json.loads(red_result)
-    assert isinstance(red_logs, list)
-except Exception as e:
-    print(" Red Team output is not valid JSON list:", e)
-    print("Raw Output:\n", red_result)
-    exit(1)
+all_red_logs = []
+for entry in str(red_output).split("```json"):
+    if "]" in entry:
+        try:
+            logs = json.loads(entry.split("```")[0].strip())
+            if isinstance(logs, list):
+                all_red_logs.extend(logs)
+        except:
+            continue
 
-# Save red logs
+print(f"\n Total Red Logs Collected: {len(all_red_logs)}")
+
 red_log_file = os.path.join(log_dir, "syn_log.json")
 with open(red_log_file, "w") as f:
-    json.dump(red_logs, f, indent=2)
+    json.dump(all_red_logs, f, indent=2)
 
-# === BLUE TEAM ===
-print("\n=== [Blue Team] Starting Detection Phase ===\n")
-
-log_task = Task(
-    description=(
-        "Parse the following JSON array of raw logs into structured entries using the Universal Log Parser tool.\n"
-        "Do not explain or summarize. **Return ONLY the JSON list.**\n\n"
-        f"{json.dumps(red_logs)}"
-    ),
-    agent=log_monitor,
-    expected_output="A list of structured JSON logs."
-)
+# === Blue Team Tasks ===
+print("\n=== [Blue Team] Threat Classification & Mitigation ===\n")
 
 classify_task = Task(
     description=(
-        "Use the MITRE Lookup Tool to classify each structured log entry.\n"
-        "Map each attack label (e.g., DoS, BruteForce) to MITRE tactics.\n"
-        "**Respond ONLY with a JSON list of classification results.**"
+        "Classify each log below using MITRE ATT&CK tactics and techniques.\n"
+        "Return format:\n"
+        "[\n"
+        "  {\"src_ip\": \"...\", \"classification\": \"...\", \"technique_id\": \"...\", \"technique\": \"...\", \"confidence\": \"high\", \"reason\": \"...\"},\n"
+        "  ...\n"
+        "]\n\n"
+        "Input logs:\n\n"
+        f"{json.dumps(all_red_logs)}"
     ),
     agent=threat_classifier,
-    context=[log_task],
-    expected_output="JSON list of classification entries per log"
+    expected_output="A JSON list of MITRE-classified logs"
 )
 
 mitigate_task = Task(
     description=(
-        "Generate a mitigation plan for each classified threat.\n"
-        "Use the Threat Memory Tool to detect repeated attack patterns.\n"
-        "**Respond ONLY with a JSON list of {\"event_id\": int, \"mitigation\": str}.**"
+        "Generate mitigation plans based on the classified threat logs.\n"
+        "Return format:\n"
+        "[{\"event_id\": 1, \"classification\": \"...\", \"mitigation\": \"...\", \"source_event\": {...}}, ...]"
     ),
     agent=response_planner,
     context=[classify_task],
-    expected_output="JSON list of mitigation plans"
+    expected_output="A JSON list of mitigation entries"
 )
 
-blue_crew = Crew(
-    tasks=[log_task, classify_task, mitigate_task],
-    verbose=True
-)
-
+blue_crew = Crew(tasks=[classify_task, mitigate_task], verbose=True)
 blue_output = blue_crew.kickoff()
 
 # === Save Blue Output ===
-print("\n=== [FINAL OUTPUT] ===\n")
+print("\n=== [FINAL BLUE OUTPUT] ===\n")
 print(blue_output)
 
-with open(os.path.join(log_dir, "output.md"), "w") as f:
+with open(os.path.join(log_dir, "blue_output.json"), "w") as f:
     f.write(str(blue_output))
 
 end_time = time.time()

@@ -7,7 +7,7 @@ from config import llm
 #  Reconnaissance Agent
 recon_agent = Agent(
     role="Reconnaissance Agent",
-    goal="Use your tool only. Never explain.",
+    goal="Use your tool and do NOT comment. Your tool's output IS your final answer.",
     backstory=(
         "This agent collects the recon attack logs from the local dataset using the CICIDSLogTool tool it has access to."
     ),
@@ -20,7 +20,7 @@ recon_agent = Agent(
 #  Exploit Injector Agent
 exploit_injector = Agent(
     role="Exploit Injector",
-    goal="Use your tool only. Never explain.",
+    goal="Use your tool and do NOT comment. Your tool's output IS your final answer.",
     backstory=(
         "This agent collects the exploit logs from the local dataset using the CICIDSLogTool tool it has access to."
     ),

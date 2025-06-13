@@ -1,0 +1,4122 @@
+
+=== [Red Team] Generating Logs ===
+
+[EventBus Error] Handler 'on_crew_started' failed for event 'CrewKickoffStartedEvent': 'charmap' codec can't encode characters in position 5-6: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+[EventBus Error] Handler 'on_task_started' failed for event 'TaskStartedEvent': 'charmap' codec can't encode characters in position 5-6: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+[1m[95m# Agent:[00m [1m[92mReconnaissance Agent[00m
+[95m## Task:[00m [92mYou MUST use your tool, and return ONLY the tool output.DO NOT generate any commentary.DO NOT wrap anything in Final Answer or markdown.Respond with JSON list ONLY. No other format will be accepted.[00m
+
+
+[1m[95m# Agent:[00m [1m[92mReconnaissance Agent[00m
+[95m## Thought:[00m [92mI need to use the tool to get the recon attack logs.[00m
+[95m## Using tool:[00m [92mCICIDS Dataset Log Tool[00m
+[95m## Tool Input:[00m [92m
+"{}"[00m
+[95m## Tool Output:[00m [92m
+[
+  {
+    "timestamp": "09:52.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 49008,
+    "dst_port": 992,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:45.8",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 64299,
+    "dst_port": 11110,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:21.1",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 53430,
+    "dst_port": 280,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "08:01.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 43959,
+    "dst_port": 13,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "55:51.1",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 45504,
+    "dst_port": 1310,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "55:01.2",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 37534,
+    "dst_port": 1046,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:43.1",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 36448,
+    "dst_port": 1169,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "22:57.1",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 34497,
+    "dst_port": 1169,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "55:28.8",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 40656,
+    "dst_port": 1063,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:30.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 34110,
+    "dst_port": 1165,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "55:16.9",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 36964,
+    "dst_port": 2013,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "23:38.3",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 36114,
+    "dst_port": 110,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "54:17.8",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 50186,
+    "dst_port": 3369,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "54:21.8",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 46392,
+    "dst_port": 6669,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "23:24.6",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 54599,
+    "dst_port": 1102,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:29.4",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 43924,
+    "dst_port": 8194,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "55:26.1",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 40546,
+    "dst_port": 10082,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "54:20.4",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 45348,
+    "dst_port": 1065,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "54:52.0",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 39802,
+    "dst_port": 25734,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "55:22.2",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 39378,
+    "dst_port": 20222,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "53:05.0",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 59529,
+    "dst_port": 1217,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:08.8",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 62393,
+    "dst_port": 5050,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "55:43.2",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 49548,
+    "dst_port": 2048,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:30.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 34110,
+    "dst_port": 9575,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "55:38.0",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 40056,
+    "dst_port": 32770,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:19.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 42849,
+    "dst_port": 1090,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "54:53.3",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 45892,
+    "dst_port": 5907,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:43.1",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 36448,
+    "dst_port": 3323,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:34.8",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 44029,
+    "dst_port": 3784,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "09:38.9",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 49025,
+    "dst_port": 8000,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "54:46.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 33234,
+    "dst_port": 1247,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "55:41.9",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 38064,
+    "dst_port": 15660,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:00.6",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 51546,
+    "dst_port": 6100,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "54:57.3",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 36658,
+    "dst_port": 1169,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:15.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 58812,
+    "dst_port": 1123,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "22:16.0",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 46785,
+    "dst_port": 1494,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:54.1",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 35613,
+    "dst_port": 2045,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "55:39.3",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 53612,
+    "dst_port": 49176,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "51:51.0",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 42784,
+    "dst_port": 500,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:36.3",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 62223,
+    "dst_port": 2049,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "54:19.2",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 46496,
+    "dst_port": 13,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:08.8",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 62393,
+    "dst_port": 555,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "51:57.8",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 51887,
+    "dst_port": 1031,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:34.8",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 44029,
+    "dst_port": 515,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "55:11.6",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 54654,
+    "dst_port": 3128,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "51:45.5",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 59478,
+    "dst_port": 49,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "55:51.2",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 51470,
+    "dst_port": 7741,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:43.0",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 36448,
+    "dst_port": 8080,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "53:03.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 44511,
+    "dst_port": 808,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "54:54.6",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 49878,
+    "dst_port": 44501,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  }
+][00m
+
+
+[1m[95m# Agent:[00m [1m[92mReconnaissance Agent[00m
+[95m## Final Answer:[00m [92m
+[
+  {
+    "timestamp": "09:52.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 49008,
+    "dst_port": 992,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:45.8",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 64299,
+    "dst_port": 11110,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:21.1",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 53430,
+    "dst_port": 280,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "08:01.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 43959,
+    "dst_port": 13,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "55:51.1",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 45504,
+    "dst_port": 1310,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "55:01.2",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 37534,
+    "dst_port": 1046,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:43.1",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 36448,
+    "dst_port": 1169,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "22:57.1",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 34497,
+    "dst_port": 1169,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "55:28.8",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 40656,
+    "dst_port": 1063,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:30.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 34110,
+    "dst_port": 1165,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "55:16.9",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 36964,
+    "dst_port": 2013,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "23:38.3",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 36114,
+    "dst_port": 110,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "54:17.8",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 50186,
+    "dst_port": 3369,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "54:21.8",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 46392,
+    "dst_port": 6669,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "23:24.6",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 54599,
+    "dst_port": 1102,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:29.4",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 43924,
+    "dst_port": 8194,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "55:26.1",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 40546,
+    "dst_port": 10082,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "54:20.4",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 45348,
+    "dst_port": 1065,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "54:52.0",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 39802,
+    "dst_port": 25734,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "55:22.2",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 39378,
+    "dst_port": 20222,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "53:05.0",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 59529,
+    "dst_port": 1217,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:08.8",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 62393,
+    "dst_port": 5050,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "55:43.2",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 49548,
+    "dst_port": 2048,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:30.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 34110,
+    "dst_port": 9575,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "55:38.0",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 40056,
+    "dst_port": 32770,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:19.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 42849,
+    "dst_port": 1090,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "54:53.3",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 45892,
+    "dst_port": 5907,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:43.1",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 36448,
+    "dst_port": 3323,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:34.8",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 44029,
+    "dst_port": 3784,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "09:38.9",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 49025,
+    "dst_port": 8000,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "54:46.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 33234,
+    "dst_port": 1247,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "55:41.9",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 38064,
+    "dst_port": 15660,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:00.6",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 51546,
+    "dst_port": 6100,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "54:57.3",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 36658,
+    "dst_port": 1169,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:15.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 58812,
+    "dst_port": 1123,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "22:16.0",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 46785,
+    "dst_port": 1494,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:54.1",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 35613,
+    "dst_port": 2045,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "55:39.3",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 53612,
+    "dst_port": 49176,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "51:51.0",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 42784,
+    "dst_port": 500,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:36.3",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 62223,
+    "dst_port": 2049,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "54:19.2",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 46496,
+    "dst_port": 13,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:08.8",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 62393,
+    "dst_port": 555,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "51:57.8",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 51887,
+    "dst_port": 1031,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:34.8",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 44029,
+    "dst_port": 515,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "55:11.6",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 54654,
+    "dst_port": 3128,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "51:45.5",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 59478,
+    "dst_port": 49,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "55:51.2",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 51470,
+    "dst_port": 7741,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "52:43.0",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 36448,
+    "dst_port": 8080,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "53:03.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 44511,
+    "dst_port": 808,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  },
+  {
+    "timestamp": "54:54.6",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 49878,
+    "dst_port": 44501,
+    "protocol": 6,
+    "event_type": "Portscan",
+    "severity": "high"
+  }
+][00m
+
+
+[EventBus Error] Handler 'on_task_started' failed for event 'TaskStartedEvent': 'charmap' codec can't encode characters in position 5-6: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+[1m[95m# Agent:[00m [1m[92mExploit Injector[00m
+[95m## Task:[00m [92mYou MUST use your tool, and return ONLY the tool output.DO NOT generate any commentary.DO NOT wrap anything in Final Answer or markdown.Respond with JSON list ONLY. No other format will be accepted.[00m
+
+
+[1m[95m# Agent:[00m [1m[92mExploit Injector[00m
+[95m## Using tool:[00m [92mCICIDS Dataset Log Tool[00m
+[95m## Tool Input:[00m [92m
+"{}"[00m
+[95m## Tool Output:[00m [92m
+[
+  {
+    "timestamp": "11:03.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 56684,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "58:35.6",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 52849,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "04:50.2",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 62983,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "07:47.6",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 29791,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "05:02.3",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 49178,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "02:41.3",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 61664,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "16:00.6",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 64673,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "14:08.4",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 64376,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "14:31.6",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 62276,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "00:42.9",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 20085,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "14:59.0",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 62999,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "06:46.4",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 49786,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "09:42.2",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 56969,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "03:39.5",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 61058,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "10:20.3",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 58019,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "13:10.9",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 60094,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "13:55.6",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 61298,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "15:37.2",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 64033,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "57:48.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 15731,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "02:19.2",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 22597,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "09:04.1",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 55919,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "00:58.3",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 58799,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "04:36.5",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 62605,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "57:22.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 52829,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "13:46.9",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 39324,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "04:03.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 61494,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "10:12.6",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 57791,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "11:28.2",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 57333,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "57:08.5",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 50386,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "57:06.4",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 50322,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "04:07.4",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 25238,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "15:03.1",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 63124,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "59:38.3",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 56510,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "59:48.4",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 18711,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "11:36.5",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 60154,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "59:44.5",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 18629,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "14:01.6",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 61461,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "58:27.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 52631,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "08:20.9",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 30519,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "15:20.3",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 49998,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "06:14.2",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 64993,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "11:32.5",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 35635,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "07:58.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 54103,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "00:10.6",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 57421,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "00:54.8",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 56589,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "14:28.3",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 64931,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "11:53.0",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 36211,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "11:15.8",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 57015,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "03:31.4",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 24389,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "16:10.6",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 65114,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  }
+][00m
+
+
+[1m[95m# Agent:[00m [1m[92mExploit Injector[00m
+[95m## Final Answer:[00m [92m
+[
+  {
+    "timestamp": "11:03.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 56684,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "58:35.6",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 52849,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "04:50.2",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 62983,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "07:47.6",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 29791,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "05:02.3",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 49178,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "02:41.3",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 61664,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "16:00.6",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 64673,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "14:08.4",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 64376,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "14:31.6",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 62276,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "00:42.9",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 20085,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "14:59.0",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 62999,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "06:46.4",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 49786,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "09:42.2",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 56969,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "03:39.5",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 61058,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "10:20.3",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 58019,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "13:10.9",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 60094,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "13:55.6",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 61298,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "15:37.2",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 64033,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "57:48.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 15731,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "02:19.2",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 22597,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "09:04.1",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 55919,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "00:58.3",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 58799,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "04:36.5",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 62605,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "57:22.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 52829,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "13:46.9",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 39324,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "04:03.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 61494,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "10:12.6",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 57791,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "11:28.2",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 57333,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "57:08.5",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 50386,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "57:06.4",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 50322,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "04:07.4",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 25238,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "15:03.1",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 63124,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "59:38.3",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 56510,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "59:48.4",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 18711,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "11:36.5",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 60154,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "59:44.5",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 18629,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "14:01.6",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 61461,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "58:27.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 52631,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "08:20.9",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 30519,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "15:20.3",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 49998,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "06:14.2",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 64993,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "11:32.5",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 35635,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "07:58.7",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 54103,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "00:10.6",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 57421,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "00:54.8",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 56589,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "14:28.3",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 64931,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "11:53.0",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 36211,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "11:15.8",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 57015,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "03:31.4",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 24389,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  },
+  {
+    "timestamp": "16:10.6",
+    "src_ip": "172.16.0.1",
+    "dst_ip": "192.168.10.50",
+    "src_port": 65114,
+    "dst_port": 80,
+    "protocol": 6,
+    "event_type": "DDoS",
+    "severity": "high"
+  }
+][00m
+
+
+
+ Total Red Logs Collected: 50
+
+=== [Blue Team] Threat Classification & Mitigation ===
+
+[EventBus Error] Handler 'on_crew_started' failed for event 'CrewKickoffStartedEvent': 'charmap' codec can't encode characters in position 5-6: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+[EventBus Error] Handler 'on_task_started' failed for event 'TaskStartedEvent': 'charmap' codec can't encode characters in position 5-6: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+[1m[95m# Agent:[00m [1m[92mThreat Classifier[00m
+[95m## Task:[00m [92mClassify each log below using MITRE ATT&CK tactics and techniques.
+Return format:
+[
+  {"src_ip": "...", "classification": "...", "technique_id": "...", "technique": "...", "confidence": "high", "reason": "..."},
+  ...
+]
+
+Input logs:
+
+[{"timestamp": "11:03.7", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 56684, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "58:35.6", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 52849, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "04:50.2", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 62983, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "07:47.6", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 29791, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "05:02.3", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 49178, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "02:41.3", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 61664, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "16:00.6", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 64673, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "14:08.4", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 64376, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "14:31.6", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 62276, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "00:42.9", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 20085, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "14:59.0", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 62999, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "06:46.4", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 49786, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "09:42.2", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 56969, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "03:39.5", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 61058, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "10:20.3", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 58019, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "13:10.9", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 60094, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "13:55.6", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 61298, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "15:37.2", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 64033, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "57:48.7", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 15731, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "02:19.2", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 22597, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "09:04.1", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 55919, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "00:58.3", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 58799, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "04:36.5", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 62605, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "57:22.7", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 52829, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "13:46.9", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 39324, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "04:03.7", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 61494, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "10:12.6", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 57791, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "11:28.2", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 57333, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "57:08.5", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 50386, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "57:06.4", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 50322, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "04:07.4", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 25238, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "15:03.1", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 63124, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "59:38.3", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 56510, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "59:48.4", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 18711, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "11:36.5", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 60154, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "59:44.5", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 18629, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "14:01.6", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 61461, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "58:27.7", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 52631, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "08:20.9", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 30519, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "15:20.3", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 49998, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "06:14.2", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 64993, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "11:32.5", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 35635, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "07:58.7", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 54103, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "00:10.6", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 57421, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "00:54.8", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 56589, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "14:28.3", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 64931, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "11:53.0", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 36211, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "11:15.8", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 57015, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "03:31.4", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 24389, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}, {"timestamp": "16:10.6", "src_ip": "172.16.0.1", "dst_ip": "192.168.10.50", "src_port": 65114, "dst_port": 80, "protocol": 6, "event_type": "DDoS", "severity": "high"}][00m
+
+
+[1m[95m# Agent:[00m [1m[92mThreat Classifier[00m
+[95m## Final Answer:[00m [92m
+```json
+[
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."},
+  {"src_ip": "172.16.0.1", "classification": "Denial of Service", "technique_id": "T1498", "technique": "Application Layer DDoS", "confidence": "high", "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."}
+]
+```[00m
+
+
+[EventBus Error] Handler 'on_task_started' failed for event 'TaskStartedEvent': 'charmap' codec can't encode characters in position 5-6: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+[1m[95m# Agent:[00m [1m[92mMitigation Planner[00m
+[95m## Task:[00m [92mGenerate mitigation plans based on the classified threat logs.
+Return format:
+[{"event_id": 1, "classification": "...", "mitigation": "...", "source_event": {...}}, ...][00m
+
+
+[1m[95m# Agent:[00m [1m[92mMitigation Planner[00m
+[95m## Thought:[00m [92mI need to generate mitigation plans for the provided threat logs. The logs indicate a Denial of Service attack. I will use the Detailed Mitigation Planner tool to create the mitigation plan.[00m
+[95m## Using tool:[00m [92mDetailed Mitigation Planner[00m
+[95m## Tool Input:[00m [92m
+"{\"classified_logs\": \"[{\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}, {\\\"src_ip\\\": \\\"172.16.0.1\\\", \\\"classification\\\": \\\"Denial of Service\\\", \\\"technique_id\\\": \\\"T1498\\\", \\\"technique\\\": \\\"Application Layer DDoS\\\", \\\"confidence\\\": \\\"high\\\", \\\"reason\\\": \\\"Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'.\\\"}]\"}"[00m
+[95m## Tool Output:[00m [92m
+[
+  {
+    "entry": {
+      "event_id": 1,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 2,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 3,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 4,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 5,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 6,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 7,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 8,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 9,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 10,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 11,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 12,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 13,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 14,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 15,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 16,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 17,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 18,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 19,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 20,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 21,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 22,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 23,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 24,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 25,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 26,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 27,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 28,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 29,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 30,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 31,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 32,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 33,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 34,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 35,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 36,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 37,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 38,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 39,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 40,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 41,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  }
+][00m
+
+
+[1m[95m# Agent:[00m [1m[92mMitigation Planner[00m
+[95m## Final Answer:[00m [92m
+[
+  {
+    "entry": {
+      "event_id": 1,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 2,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 3,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 4,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 5,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 6,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 7,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 8,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 9,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 10,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 11,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 12,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 13,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 14,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 15,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 16,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 17,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 18,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 19,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 20,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 21,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 22,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 23,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 24,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 25,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 26,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 27,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 28,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 29,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 30,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 31,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 32,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 33,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 34,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 35,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 36,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 37,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 38,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 39,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 40,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 41,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  }
+][00m
+
+
+
+=== [FINAL BLUE OUTPUT] ===
+
+[
+  {
+    "entry": {
+      "event_id": 1,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 2,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 3,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 4,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 5,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 6,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 7,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 8,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 9,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 10,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 11,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 12,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 13,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 14,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 15,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 16,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 17,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 18,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 19,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 20,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 21,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 22,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 23,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 24,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 25,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 26,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 27,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 28,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 29,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 30,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 31,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 32,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 33,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 34,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 35,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 36,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 37,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 38,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 39,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 40,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  },
+  {
+    "entry": {
+      "event_id": 41,
+      "classification": "Denial of Service",
+      "confidence": "high",
+      "mitigation": "Monitor the system for unusual activity.",
+      "source_event": {
+        "src_ip": "172.16.0.1",
+        "classification": "Denial of Service",
+        "technique_id": "T1498",
+        "technique": "Application Layer DDoS",
+        "confidence": "high",
+        "reason": "Multiple connections from the same source IP to the same destination IP on port 80, with event type 'DDoS'."
+      }
+    }
+  }
+]
+
+ Execution completed in 129.34 seconds.
